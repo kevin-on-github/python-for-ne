@@ -13,6 +13,10 @@ if password:
     tn.read_until(b"Password: ")
     tn.write(password.encode('ascii') + b"\n")
 
+# During the class it was stated this is not how programs should be written, this is more difficult than
+# just programming the devices directly. As the first code lab though it does show how the telnetlib and
+# getpass modules work. Additional labs will build upon these basic samples.
+    
 tn.write(b"enable\n")
 tn.write(b"cisco\n")
 tn.write(b"conf t\n")
