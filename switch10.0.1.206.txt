@@ -7,15 +7,15 @@
 * purposes is expressly prohibited except as otherwise authorized by     *
 * Cisco in writing.                                                      *
 **************************************************************************
-S2>terminal length 0
-S2>enable
+S6>terminal length 0
+S6>enable
 Password: 
-S2#show run
+S6#show run
 Building configuration...
 
-Current configuration : 3337 bytes
+Current configuration : 3200 bytes
 !
-! Last configuration change at 23:41:23 UTC Tue Jun 29 2021 by cisco
+! Last configuration change at 18:17:35 UTC Wed Jun 30 2021 by cisco
 !
 version 15.2
 service timestamps debug datetime msec
@@ -23,7 +23,7 @@ service timestamps log datetime msec
 no service password-encryption
 service compress-config
 !
-hostname S2
+hostname S6
 !
 boot-start-marker
 boot-end-marker
@@ -87,29 +87,19 @@ interface GigabitEthernet1/2
 interface GigabitEthernet1/3
  negotiation auto
 !
-interface GigabitEthernet2/0
- negotiation auto
-!
-interface GigabitEthernet2/1
- negotiation auto
-!
-interface GigabitEthernet2/2
- negotiation auto
-!
-interface GigabitEthernet2/3
- negotiation auto
-!
 interface Vlan1
- ip address 10.0.1.203 255.255.255.0
+ ip address 10.0.1.206 255.255.255.0
 !
 router ospf 1
  network 0.0.0.0 255.255.255.255 area 0
 !
+ip default-gateway 10.0.1.1
 ip forward-protocol nd
 !
 ip http server
 ip http secure-server
 !
+ip route 0.0.0.0 0.0.0.0 10.0.1.1
 ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
 ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
 !
@@ -157,5 +147,5 @@ line vty 0 4
 !
 end
 
-S2#exit
+S6#exit
 
