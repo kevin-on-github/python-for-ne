@@ -1,0 +1,38 @@
+spanning-tree mode rapid-pvst
+ip name-server 192.168.1.254
+no ip http server
+ip http secure-server
+
+ntp server 192.168.1.254 
+ntp update-calendar
+
+clock timezone EST -5
+clock summer-time EDT recurring
+service timestamps debug datetime msec localtime 
+service timestamps log datetime msec localtime
+
+int range g0/0 - 2
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ switchport nonegotiate
+ switchport trunk allowed vlan all
+
+ipv6 unicast-routing
+
+vlan 10
+ name Data
+vlan 11
+ name Voice
+vlan 12
+ name Test 
+
+interface vlan 1
+ description In-band Management
+
+ip dhcp snooping vlan 10,11
+
+no ip dhcp snooping information option 
+ip dhcp snooping
+ip arp inspection vlan 10,11
+ipv6 nd raguard policy HOST_POLICY 
+ device-role host
