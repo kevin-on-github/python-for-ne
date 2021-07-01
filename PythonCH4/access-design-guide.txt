@@ -11,7 +11,7 @@ clock summer-time EDT recurring
 service timestamps debug datetime msec localtime 
 service timestamps log datetime msec localtime
 
-int range g0/0 - 2
+int range g0/1 - 2
  switchport trunk encapsulation dot1q
  switchport mode trunk
  switchport nonegotiate

@@ -40,23 +40,10 @@ S6 = {
     'password': 'cisco'
 }
 
-with open('mgmt-design-guide.txt') as f:
-    lines = f.read().splitlines()
-print (lines)
-
-
-all_devices = [S1]
-
-for devices in all_devices:
-    net_connect = ConnectHandler(**devices)
-    output = net_connect.send_config_set(lines)
-    print (output)
-
 
 with open('access-design-guide.txt') as f:
     lines = f.read().splitlines()
 print (lines)
-
 
 all_devices = [S4, S5, S6]
 
@@ -71,10 +58,22 @@ with open('core-design-guide.txt') as f:
 print (lines)
 
 
-all_devices = [S2, S3]
+all_devices = [S3, S2]
 
 for devices in all_devices:
     net_connect = ConnectHandler(**devices)
     output = net_connect.send_config_set(lines)
     print (output)
 
+
+with open('mgmt-design-guide.txt') as f:
+    lines = f.read().splitlines()
+print (lines)
+
+
+all_devices = [S1]
+
+for devices in all_devices:
+    net_connect = ConnectHandler(**devices)
+    output = net_connect.send_config_set(lines)
+    print (output)
