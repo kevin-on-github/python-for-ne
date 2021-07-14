@@ -5,3 +5,4 @@
 
  NOTE: Certain portions of this lab require loading several python modules. Check the requirements.txt file for the complete
        loadout.
+       Also see the cisco-fix.txt file for resolving the ssh issues for adding support for outdated CML images.
