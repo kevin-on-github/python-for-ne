@@ -1,0 +1,1 @@
+alias ssh="ssh -oKexAlgorithms=+diffie-hellman-group14-sha1"
