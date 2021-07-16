@@ -1,0 +1,2 @@
+router bgp 65000
+ network 10.0.1.0 mask 255.255.255.0
