@@ -6,3 +6,9 @@
  NOTE: Certain portions of this lab require loading several python modules. Check the requirements.txt file for the complete
        loadout.
        Also see the cisco-fix.txt file for resolving the ssh issues for adding support for outdated CML images.
+
+ NOTE: Chapter 9 introduces python module simple-crypt which installs a requirement pycrypto which appears to be
+       outdated. I had to manually remove pycrypto and install pycryptodome. Docs for simple-crypt mention the dependencie
+       was updated, but alas this caused time.clock errors in the scripts.
+        - pip uninstall pycrypto
+        - pip install pycryptodome

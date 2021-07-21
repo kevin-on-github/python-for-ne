@@ -1,4 +1,4 @@
 # NOTE: netmiko and napalm may require additional tweaks to allow newer ssh crypto to access older CML images.
 # I either run this command, or put it in the end of ~/.bashrc
 
-alias ssh="ssh -oKexAlgorithms=+diffie-hellman-group14-sha1"
+echo 'alias ssh="ssh -oKexAlgorithms=+diffie-hellman-group14-sha1"' >> ~/.bashrc
