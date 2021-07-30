@@ -12,3 +12,5 @@
        was updated, but alas this caused time.clock errors in the scripts.
         - pip uninstall pycrypto
         - pip install pycryptodome
+ - From CH10-13 is pure lecture with simple python text processing. It's not meaty enough to lab, but is well worth the time I spent doing it.
+ - In 14 I start to implement some of the work done over the previous chapters with more in depth text processing. Though not mentioned I leaned in with sqlite3, jinja2, and how to read data from sql, process text through a jinja2 template. Things are starting to come together. Slow progress, but progress nonetheless.
