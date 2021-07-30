@@ -1,0 +1,7 @@
+id,name,ip_addr,loopback,username,password,location
+2,S2,10.0.1.202,1.1.1.202,cisco,cisco,lab
+3,R1,10.0.1.1,1.1.1.1,cisco,cisco,lab
+4,S3,10.0.1.203,1.1.1.203,cisco,cisco,lab
+5,S4,10.0.1.204,1.1.1.204,cisco,cisco,lab
+6,S5,10.0.1.205,1.1.1.205,cisco,cisco,lab
+7,R6,10.0.1.206,1.1.1.206,cisco,cisco,lab
