@@ -4,7 +4,7 @@ from getpass import getpass
 username = input('Enter your SSH username: ')
 password = getpass()
 
-S1 = {
+R2 = {
     'device_type': 'cisco_ios',
     'ip': '10.0.1.2',
     'username': (username),
@@ -12,12 +12,12 @@ S1 = {
 }
 S2 = {
     'device_type': 'cisco_ios',
-    'ip': '10.0.1.3',
+    'ip': '10.0.1.202',
     'username': (username),
     'password': (password)
 }
 
-all_devices = [S1, S2]
+all_devices = [R2, S2]
 
 for devices in all_devices:
     net_connect = ConnectHandler(**devices)
